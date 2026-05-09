@@ -1,3 +1,5 @@
+import CategoryAccordion from "@/components/CategoryAccordion";
+import projects from "@/data/projects.json";
 export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-950 text-zinc-100 px-8 py-20 max-w-3xl mx-auto">
@@ -12,18 +14,22 @@ export default function Home() {
           What you build, why you build it, what drives you. Keep it short.
         </p>
       </header>
-      <h2 className="text-3xl font-bold tracking-tight mb-8">
-        Robotics
-      </h2>
-      <h2 className="text-3xl font-bold tracking-tight mb-8">
-        APIs
-      </h2>
-      <h2 className="text-3xl font-bold tracking-tight mb-8">
-        Webapps
-      </h2>
-      <h2 className="text-3xl font-bold tracking-tight mb-8">
-        Games
-      </h2>
+      <CategoryAccordion
+        title="Robotics"
+        projects={projects.filter(p => p.category === "Robotics")}
+      />
+      <CategoryAccordion
+        title="APIs"
+        projects={projects.filter(p => p.category === "APIs")}
+      />
+      <CategoryAccordion
+        title="Webapps"
+        projects={projects.filter(p => p.category === "Webapps")}
+      />
+      <CategoryAccordion
+        title="Games"
+        projects={projects.filter(p => p.category === "Games")}
+      />
     </main>
   );
 }
