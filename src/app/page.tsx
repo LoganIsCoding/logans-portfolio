@@ -12,6 +12,18 @@ export default function Home() {
           What you build, why you build it, what drives you. Keep it short.
         </p>
       </header>
+      <h2 className="text-3xl font-bold tracking-tight mb-8">
+        Robotics
+      </h2>
+      <h2 className="text-3xl font-bold tracking-tight mb-8">
+        APIs
+      </h2>
+      <h2 className="text-3xl font-bold tracking-tight mb-8">
+        Webapps
+      </h2>
+      <h2 className="text-3xl font-bold tracking-tight mb-8">
+        Games
+      </h2>
     </main>
   );
 }
