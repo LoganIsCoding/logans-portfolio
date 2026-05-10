@@ -10,8 +10,10 @@ export default function Home() {
         </h1>
         <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">
           {/* TODO: write this in your own voice */}
-          Lorem ipsum placeholder — something direct, enthusiastic, no fluff.
-          What you build, why you build it, what drives you. Keep it short.
+          I'm a software systems engineer with a background in pharmacy automation. SQL,
+          infrastructure as code, and building AI workflows. Before that I fixed Panasonic Toughbooks
+          and built drones. I just really like building things. I'm always looking to collaborate, and
+          below are some of the projects I've worked on and am currently building.
         </p>
       </header>
       <CategoryAccordion
