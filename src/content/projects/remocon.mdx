@@ -1,13 +1,21 @@
-export const sections = ['overview', 'media', 'links', 'related']
+export const sections = ['overview', 'links']
 
-# Remocon
+# Remocon Keybind Revamp
 
-A refactor for the control code distributed for Remocon.
+Remocon is a platform for hosting physical robots and letting strangers on the internet control them.
+
+This project documents my refactoring of their control interface code.
 
 ## Overview
 
-Placeholder overview content.
+Remocon provides a Websocket-based control interface between a web client and a Raspberry Pi. The official sample code used a long chain of elif statements to dispatch key events. Every keypress had to fall through every condition above it. With 13 keys mapped, that's up to 26 checks per event. This also did not provide the flexibility needed for toggle switches, or key events that needed state.
 
-## Media
+The refactor replaced the entire dispatch chain with a dictionary lookup. Each key code maps directly to its label and GPIO pins, so any keypress resolves in constant time regardless of where it sits in the map. Pin assignments were also renamed from single letters to descriptive constants, and toggle support was added for the light. GPIO cleanup on exit was fixed too.
 
-Placeholder media section.
+AEON's robot currently runs this code, you can find a link to control it in the **Links** section.
+
+## Links
+
+- [Remocon.tv](https://remocon.tv)
+- [AEONs Robot](https://remocon.tv/d/6487b89dcbf3720014ea5994)
+- [Github Repository for Refactored Code](https://github.com/LoganIsCoding/RemoconRefactor)
