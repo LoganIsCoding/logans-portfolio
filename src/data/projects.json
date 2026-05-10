@@ -12,5 +12,26 @@
         "category": "Games",
         "description": "Dredging and ice cutting mechanics in Unreal.",
         "thumbnail": ""
+    },
+    {
+        "slug": "thermal-haptic-vest",
+        "name": "Thermal Haptic Vest for VR Usage",
+        "category": "Robotics",
+        "description": "A DIY Thermal Haptic Vest for VR Usage. Uses Peltier Modules.",
+        "thumbnail": ""
+    },
+    {
+        "slug": "this-website",
+        "name": "This Website",
+        "category": "Webapps",
+        "description": "Documents the design decisions that went into making this website.",
+        "thumbnail":""
+    },
+    {
+        "slug": "salsa-maker-xtreme",
+        "name": "Salsa Maker Xtreme",
+        "category": "Games",
+        "description": "A high octane game that never made it to the finish line. A story of why projects sometimes don't make it to the end.",
+        "thumbnail": ""
     }
 ]
