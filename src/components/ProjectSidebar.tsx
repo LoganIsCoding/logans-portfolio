@@ -1,19 +1,22 @@
 "use client";
-import { useState } from "react";
+import Link from "next/link";
+
 type Props = {
     sections: string[]
 }
 export default function ProjectSidebar ({ sections }: Props) {
-
     return(
-        <div>
-            <nav>
+        <nav className="flex gap-8 items-start">
+            <Link href="/" className="text-zinc-500 hover:text-zinc-100 mt-[3px]">
+                [HOME]
+            </Link>
+            <div>
                 {sections.map((section) => (
                     <a key={section} href={`#${section}`} className="block capitalize text-zinc-400 hover:text-zinc-100 py-1">
                         {section}
                     </a>
                 ))}
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 }

@@ -1,6 +1,6 @@
 import projects from "@/data/projects.json";
 import ProjectSidebar from "@/components/ProjectSidebar";
-import Link from 'next/link';
+import Comments from "@/components/Comments";
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
@@ -18,13 +18,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     }
 
     return (
-        <div className="flex min-h-screen px-8 py-20 max-w-5xl mx-auto gap-12">
-            <Link href="/" className="text-zinc-500 text-sm mb-12 block hover:text-zinc-100">
-                [LOGO]
-            </Link>
-            <ProjectSidebar sections={sections} />
+        <div className="flex min-h-screen px-8 py-20 max-w-5xl mx-auto gap-12 items-start">
+            <div className="sticky top-8">
+                <ProjectSidebar sections={sections} />
+            </div>
             <div className="prose prose-invert flex-1">
                 <Content />
+                <Comments />
             </div>
         </div>
     );
