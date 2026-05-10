@@ -18,7 +18,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     }
 
     return (
-        <div className="flex min-h-screen px-8 py-20 max-w-5xl mx-auto gap-12 items-start">
+        <div className="flex min-h-screen py-20 gap-12 items-start max-w-6xl w-full">
             <div className="sticky top-8">
                 <ProjectSidebar sections={sections} />
             </div>

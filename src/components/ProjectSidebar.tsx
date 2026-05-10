@@ -8,7 +8,7 @@ export default function ProjectSidebar ({ sections }: Props) {
     return(
         <nav className="flex gap-8 items-start">
             <Link href="/" className="text-zinc-500 hover:text-zinc-100 mt-[3px]">
-                [HOME]
+                Home
             </Link>
             <div>
                 {sections.map((section) => (
