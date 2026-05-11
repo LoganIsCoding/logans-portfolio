@@ -40,5 +40,12 @@
         "category": "Robotics",
         "description": "A homegrown software for logging temperatures over serial using a CH340 chip.",
         "thumbnail":"/thumbnails/temp-logger.jpg"
+    },
+    {
+        "slug": "github-time-capsule",
+        "name": "Github Time Capsule API",
+        "category": "APIs",
+        "description": "A toy API that takes a username as a query parameter and returns data about how much that Github user grew via stars, repo count, and language.",
+        "thumbnail":"/thumbnails/github.png"
     }
 ]

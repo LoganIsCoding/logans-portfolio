@@ -1,0 +1,28 @@
+export const sections = ['overview', 'usage', 'links', 'comments']
+
+# GitHub Time Capsule
+
+An API that takes a GitHub username and returns a summary of how far they've come.
+
+## Overview
+
+GitHub Time Capsule pulls your public repositories, star counts, and languages, then builds a report anchored to your oldest repo. The idea is simple: your oldest repo is where you started. Everything since is growth.
+
+It returns your current stats, a breakdown of your technology focus, and a growth section showing how much has changed since that first repo.
+
+This project was built primarily to experiment with the GitHub public API and demonstrate clean API design. There is no frontend, the API returns JSON directly.
+
+## Usage
+
+Send a GET request with a GitHub username as a query parameter:
+
+```
+GET https://github-time-capsule-mauve.vercel.app/api/timecapsule?username=LoganIsCoding
+```
+
+## Links
+
+- [Live API](https://github-time-capsule-mauve.vercel.app/api/timecapsule)
+- [Github Repository](https://github.com/LoganIsCoding/github-time-capsule)
+
+## Comments
