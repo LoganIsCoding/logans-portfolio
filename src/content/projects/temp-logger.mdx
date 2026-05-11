@@ -1,0 +1,23 @@
+export const sections = ['overview', 'links', 'related', 'comments']
+
+# Temp Logger
+
+Data acquisition tool for the ThermalVest DAQ project.
+
+## Overview
+
+The vest testing process generates temperature readings from multiple sensors over serial. This tool listens on a configurable COM port, maps each channel to a human-readable label, and plots all channels live as the test runs.
+
+When the test completes it exports two artifacts: a CSV of the raw data and an interactive HTML report built with Plotly. The graph from the first pilot test was produced by this tool.
+
+Channels, baud rate, port, test duration, and output file name are all configurable via CLI arguments. The test is started and paused with the spacebar.
+
+## Links
+
+- [GitHub Repository](https://github.com/LoganIsCoding/ThermalVest-DAQ)
+
+## Related
+
+- [Thermal Haptic Vest](/projects/thermal-haptic-vest)
+
+## Comments

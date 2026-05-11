@@ -4,34 +4,41 @@
         "name": "Remocon Keybind Revamp",
         "category": "Robotics",
         "description": "Revamped code that facilitates keybind and pin output",
-        "thumbnail": ""
+        "thumbnail": "/thumbnails/remocon.png"
     },
     {
         "slug": "arctic-gold",
         "name": "Arctic Gold",
         "category": "Games",
         "description": "Dredging and ice cutting mechanics in Unreal.",
-        "thumbnail": ""
+        "thumbnail": "/thumbnails/ArcticGold2.png"
     },
     {
         "slug": "thermal-haptic-vest",
         "name": "Thermal Haptic Vest for VR Usage",
         "category": "Robotics",
         "description": "A DIY Thermal Haptic Vest for VR Usage. Uses Peltier Modules.",
-        "thumbnail": ""
+        "thumbnail": "/thumbnails/thermal-haptic-vest.jpg"
     },
     {
         "slug": "this-website",
         "name": "This Website",
         "category": "Webapps",
         "description": "Documents the design decisions that went into making this website.",
-        "thumbnail":""
+        "thumbnail":"/next.svg"
     },
     {
         "slug": "salsa-maker-xtreme",
         "name": "Salsa Maker Xtreme",
         "category": "Games",
         "description": "A high octane game that never made it to the finish line. A story of why projects sometimes don't make it to the end.",
-        "thumbnail": ""
+        "thumbnail": "/thumbnails/ghostpepper.png"
+    },
+    {
+        "slug": "temp-logger",
+        "name": "Temp Logger",
+        "category": "Robotics",
+        "description": "A homegrown software for logging temperatures over serial using a CH340 chip.",
+        "thumbnail":"/thumbnails/temp-logger.jpg"
     }
 ]

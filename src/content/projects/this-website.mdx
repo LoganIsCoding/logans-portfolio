@@ -1,13 +1,27 @@
-export const sections = ['overview', 'media', 'links', 'related']
+export const sections = ['overview', 'stack', 'design', 'comments']
 
 # This Website
 
-A page discussing the design decisions and process that went into making this website.
+The portfolio site you are currently reading.
 
 ## Overview
 
-Placeholder overview content.
+Needed a place to put projects that wasn't a PDF resume or a GitHub profile. Wanted something that felt direct, no corporate fluff, and built to grow over time.
 
-## Media
+## Stack
 
-Placeholder media section.
+Next.js 16, React 19, Tailwind CSS v4, MDX, Giscus, deployed on Vercel.
+
+Next.js was the obvious choice for a statically generated site with dynamic routes. Tailwind v4 handles styling without a separate config file. MDX lets project pages be written as markdown while still supporting React components when needed. Giscus was chosen for comments because it requires no backend. Discussions live in a GitHub repo and render via an iframe.
+
+## Design
+
+This page was built alongside the rest of the site, so some of the decisions here informed decisions everywhere else. These are the ones worth talking about.
+
+Projects live in a JSON file. Adding one means adding an entry to that file and writing an MDX page. Vercel picks it up on the next push. No database, no backend, no auth layer. Just files and a build step.
+
+Project pages declare their own sections via an exported array in the MDX file. The sidebar nav reads that array and only renders links for sections that actually have content. Comments use Giscus, which maps each page by pathname to its own GitHub Discussion thread with no backend required.
+
+The accordion on the home page filters projects from the same JSON by category. The slide animation uses the CSS grid rows trick rather than JavaScript height measurement, which avoids layout thrashing without any resize observers.
+
+## Comments
