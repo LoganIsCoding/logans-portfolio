@@ -7,7 +7,7 @@ export default function ProjectCard({ slug, name, description, thumbnail }: Proj
         <div className="flex items-center gap-4 p-4">
             <Link href={`/projects/${slug}`} className="flex items-center gap-4">
                 {thumbnail ? (
-                    <Image alt={name} src={thumbnail} width={80} height={80} className="rounded" />
+                    <Image alt={name} src={thumbnail} width={80} height={80} className="rounded object-cover w-20 h-20" />
                 ) : (
                     <div className="w-20 h-20 bg-zinc-700 rounded" />
                 )}

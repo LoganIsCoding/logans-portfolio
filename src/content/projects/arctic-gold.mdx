@@ -1,13 +1,25 @@
-export const sections = ['overview', 'media', 'links', 'related']
+export const sections = ['overview', 'related', 'comments']
 
 # Arctic Gold
 
-A long-term Unreal Engine project featuring a dredging mechanic and ice cutting mechanic.
+A 5-player cooperative experience set in the arctic. Your team ventures out to recover gold from the seafloor while managing life support, communications, and threats from above and below.
 
 ## Overview
 
-Placeholder overview content.
+Arctic Gold is an early prototype. Players must coordinate to keep the diver alive and productive: surface crew manages life support and communications while the diver works the seafloor. Gold recovery, team coordination, and defense against environmental and hostile threats all happen simultaneously.
 
-## Media
+### Dredging System
 
-Placeholder media section.
+The dredging system lets the diver vacuum sediment from the seafloor to expose gold. Under the hood this is a runtime landscape masking system. A custom material uses a parameter to track the cast impact location and paint a black circle at that point at runtime, effectively erasing sediment from the surface without modifying the landscape asset itself.
+
+### Ice Cutting
+
+A separate tool and system that allows players to cut holes through ice using a boolean subtract operation.
+
+### Rope Simulation
+
+The diver is tethered by up to four lines: communications, air, material hose, and vacuum hose. A custom rope simulation handles all four simultaneously and wraps correctly around objects in the environment. Performance was a primary constraint given the number of active simulations running at once.
+
+## Related
+
+## Comments

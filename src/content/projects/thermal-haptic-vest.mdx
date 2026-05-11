@@ -1,13 +1,25 @@
-export const sections = ['overview', 'media', 'links', 'related']
+export const sections = ['overview', 'links', 'related', 'comments']
 
 # Thermal Haptic Vest
 
-A long-term research project that uses peltiers to simulate hot and cold environments for VR.
+A wearable peripheral designed to simulate hot and cold environments at configurable intensity levels.
 
 ## Overview
 
-Placeholder overview content.
+Most haptic peripherals stick to vibration. This project explores whether thermal feedback can meaningfully convey hot and cold environments in virtual reality.
 
-## Media
+Skin does not sense absolute temperature. It senses change in temperature over time. Peltier modules are uniquely suited to this: they excel at changing temperature at fast rates, which is almost the only thing they are good at. The vest exploits that property to create configurable thermal sensations across contact points on the body.
 
-Placeholder media section.
+Early research has found that the rate of temperature change can be controlled by varying the total energy delivered to the module over an arbitrary time window. This gives the system a tunable parameter for intensity. Power delivery is handled through PWM duty cycles rather than direct current addressing, which is how Peltier modules actually behave under load.
+
+The project is currently focused on individual cell testing. Integration into a vest form factor has not started yet. The full research process, including experiments, data, and conclusions, is documented in the repository linked below.
+
+## Links
+
+- [Documentation Repository](https://github.com/LoganIsCoding/ThermalVestDocumentationRepo)
+
+## Related
+
+- [Temperature Logger](/projects/temp-logger)
+
+## Comments

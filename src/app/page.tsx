@@ -4,12 +4,9 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100 px-8 py-20 max-w-3xl mx-auto">
+    <main className="min-h-screen text-zinc-100 py-20">
       <header className="mb-16">
-        <div className="flex items-center gap-8 mb-12">
-          <span className="text-zinc-500 text-sm mb-1">[LOGO]</span>
-          <Navbar />
-        </div>
+        <Navbar />
         <h1 className="text-5xl font-bold tracking-tight mb-8">
           I&apos;m Logan! I like building neat things that work.
         </h1>
