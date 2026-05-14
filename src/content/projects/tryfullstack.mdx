@@ -1,0 +1,41 @@
+export const sections = ['overview', 'auth', 'integration', 'design', 'deployment', 'links', 'comments']
+
+# FullStack
+
+A full-stack coding challenge platform where developers clone real repos, fix bugs, and get AI-evaluated scores. Built as a genuine SaaS targeting engineering teams who want a better way to run take-home assessments.
+
+## Overview
+
+Candidates receive a broken codebase, fix it locally, push their solution, and get back an AI-generated score with feedback, all without leaving a guided flow. The platform supports multiple challenge tracks (frontend, backend, full-stack, database), a live leaderboard, and a team management dashboard for reviewers.
+
+The monorepo is structured with Turborepo across three packages: a Next.js web app, a NestJS REST API, and a shared Prisma database layer.
+
+## Auth
+
+Authentication is handled with NextAuth v5 using GitHub OAuth. On sign-in, the platform automatically provisions a GitHub organization membership and installs a GitHub App on the candidate's forked repo. This is what enables the platform to clone, evaluate, and clean up submissions programmatically without any manual steps.
+
+## Integration
+
+The evaluation pipeline uses the Anthropic API to review submitted diffs against the challenge's expected solution. It reads the git history of the submission repo, scores correctness and code quality, then writes results back to the database and surfaces them on the leaderboard in real time.
+
+Challenge repos are managed as GitHub template repositories under a service account. When a candidate starts a challenge, the API forks the template, configures credentials, and hands back a clone URL. The whole setup takes a few seconds.
+
+## Design Choices
+
+The frontend is intentionally minimal so the UI gets out of the way and the challenge itself is the focus. Leaderboard and dashboard views use server components with direct database queries for simplicity; the few interactive pieces (starting a challenge, submitting) hit the NestJS API via REST.
+
+Prisma 7 with `prisma.config.ts` handles the database layer, keeping the datasource URL out of the schema and in config, which made Railway deployment straightforward without schema changes.
+
+## Deployment
+
+- **API + Database:** Railway (NestJS in a Dockerfile, PostgreSQL managed service)
+- **Frontend:** Vercel with Turborepo build pipeline
+- **Domain:** tryfullstack.dev via Cloudflare DNS to Vercel
+
+Environment variables are split across Railway (API secrets, GitHub App credentials, Anthropic key) and Vercel (auth secrets, public API URL). The Dockerfile uses Node 24 to support native TypeScript in workspace packages without a transpile step.
+
+## Links
+
+- [tryfullstack.dev](https://tryfullstack.dev)
+
+## Comments
