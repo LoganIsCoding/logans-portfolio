@@ -20,7 +20,7 @@ The evaluation pipeline uses the Anthropic API to review submitted diffs against
 
 Challenge repos are managed as GitHub template repositories under a service account. When a candidate starts a challenge, the API forks the template, configures credentials, and hands back a clone URL. The whole setup takes a few seconds.
 
-## Design Choices
+## Design
 
 The frontend is intentionally minimal so the UI gets out of the way and the challenge itself is the focus. Leaderboard and dashboard views use server components with direct database queries for simplicity; the few interactive pieces (starting a challenge, submitting) hit the NestJS API via REST.
 
