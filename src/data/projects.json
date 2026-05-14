@@ -47,5 +47,12 @@
         "category": "APIs",
         "description": "A toy API that takes a username as a query parameter and returns data about how much that Github user grew via stars, repo count, and language.",
         "thumbnail":"/thumbnails/github.png"
+    },
+    {
+        "slug": "tryfullstack",
+        "name": "FullStack",
+        "category": "Webapps",
+        "description": "A full-stack coding challenge platform where developers clone real repos, fix bugs, and get AI-evaluated scores. Deployed with auth, a live leaderboard, and Claude API Integration.",
+        "thumbnail": ""
     }
 ]
