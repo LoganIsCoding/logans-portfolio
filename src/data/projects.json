@@ -53,6 +53,6 @@
         "name": "FullStack",
         "category": "Webapps",
         "description": "A full-stack coding challenge platform where developers clone real repos, fix bugs, and get AI-evaluated scores. Deployed with auth, a live leaderboard, and Claude API Integration.",
-        "thumbnail": ""
+        "thumbnail": "/thumbnails/fullstack-favicon.png"
     }
 ]
